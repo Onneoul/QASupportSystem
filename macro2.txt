@@ -1,0 +1,6 @@
+{'type': 'down', 'input': 'a', 'position': Point(x=930, y=612), 'timestamp': 1693444876.2607818}
+{'type': 'down', 'input': 's', 'position': Point(x=928, y=612), 'timestamp': 1693444876.4113085}
+{'type': 'up', 'input': None, 'position': Point(x=925, y=613), 'timestamp': 1693444876.5343306}
+{'type': 'down', 'input': 'd', 'position': Point(x=925, y=613), 'timestamp': 1693444876.5403314}
+{'type': 'up', 'input': None, 'position': Point(x=925, y=613), 'timestamp': 1693444876.6043427}
+{'type': 'up', 'input': None, 'position': Point(x=922, y=613), 'timestamp': 1693444876.6803555}

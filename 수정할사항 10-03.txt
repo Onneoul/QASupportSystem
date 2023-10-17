@@ -1,0 +1,6 @@
+1. Game_information 테이블에 식별용 ID 추가 (INT, PK)
+2. FK 정리
+3. Main1의 Run Game 버튼에
+cursor.execute("SELECT exe_path FROM GAME_INFORMATION WHERE title = %s", (selected_game,))
+부분 sql문 재설정 == combobox에 game version이 함께 출력되게 해야함
+
