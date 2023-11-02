@@ -1,0 +1,10 @@
+FPS: 59
+CPU Usage: 23%
+GPU Usage: 45%
+Memory Usage: 1200 MB
+Loading Time: 3.2 seconds
+Ping: 22 ms
+Draw Calls: 323
+Triangles: 2M
+Vertices: 1M
+Audio Channels: 12

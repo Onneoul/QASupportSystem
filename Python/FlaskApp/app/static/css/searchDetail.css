@@ -1,0 +1,69 @@
+.searchDetailContainer{
+    padding: 10px;
+    height: calc(100vh - 70px);
+    overflow: visible;
+    overflow-y: auto; /* 내부에만 스크롤이 생기게 */
+}
+
+
+#testDetailArea {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5개의 열, 각각 1 비율로 */
+    grid-template-rows: repeat(8, 1fr); /* 8개의 행, 각각 1 비율로 */
+    gap: 3px 3px; /* 행과 열 사이의 간격 */
+}
+#testDetailArea {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(8, auto);
+    gap: 3px 3px;
+    align-items: start;
+}
+
+#logArea {
+    grid-row: 3 / 7;
+    grid-column: 1 / 5;
+    border: 1px dashed red;
+    margin: 3px;
+    overflow-y: auto; /* 내용이 넘치면 스크롤바 생성 */
+}
+
+#performanceArea {
+    grid-row: 1 / 3;
+    grid-column: 1 / 5;
+    border: 1px dashed red;
+    margin: 3px;
+}
+
+#bugCasesArea {
+    grid-row: 1 / 7;
+    grid-column: 5 / 6;
+    border: 1px dashed red;
+    height: 100%;
+    margin: 3px;
+    overflow-y: auto; /* 내용이 넘치면 스크롤바가 생깁니다 */
+}
+
+#caseRecommendArea {
+    grid-row: 7 / 9;
+    grid-column: 1 / 6;
+    border: 1px dashed red;
+    margin: 3px;
+}
+
+.testDetailBugCase {
+    border-bottom: 1px solid #393939;
+    width: 100%;
+}
+
+.areaTitle {
+    font-weight: 700;
+    border-bottom: 2px solid black;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.bugImage {
+  max-width: 800px;
+  max-height: 450px;
+}

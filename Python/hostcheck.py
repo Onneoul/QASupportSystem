@@ -7,10 +7,10 @@ from PIL import Image, ImageTk
 import mysql.connector
 
 db_connection = mysql.connector.connect(
-    host="localhost",
-    user="KIMMINSE",
-    password="#$aB354354",
-    database="autoQA"
+    host="180.83.154.240",
+    user="normal_user_test",
+    password="#$aB354354@aB354354",
+    database="autoqa"
 )
 
 db_cursor = db_connection.cursor()
@@ -35,7 +35,7 @@ class ScreenshotApp:
         self.current_screenshot_idx = 0
         self.popup = None
 
-        keyboard.on_press_key("F2", self.capture_screenshot) # Screenshot √‘øµ ≈∞ ¡ˆ¡§
+        keyboard.on_press_key("F2", self.capture_screenshot) # Screenshot Ï¥¨ÏòÅ ÌÇ§ ÏßÄÏ†ï
 
     def start_capture(self):
         self.capture_mode = True
@@ -95,7 +95,7 @@ class ScreenshotApp:
         with open(f"description_{self.current_screenshot_idx}.txt", "w") as f:
             f.write(description)
 
-        # MySQLø° ¡§∫∏ ¿˙¿Â
+        # MySQLÏóê Ï†ïÎ≥¥ Ï†ÄÏû•
         screenshot_name = f"screenshot_{self.current_screenshot_idx}.png"
 
         query = "INSERT INTO screenshot (SCREENSHOT_NAME, SCREENSHOT_PATH, description) VALUES (%s, %s, %s)"
@@ -115,6 +115,6 @@ if __name__ == "__main__":
     app = ScreenshotApp(root)
     root.mainloop()
     
-    # MySQL ø¨∞·¿ª ¥›¿Ω
+    # MySQL Ïó∞Í≤∞ÏùÑ Îã´Ïùå
     app.db_cursor.close()
     app.db_connection.close()

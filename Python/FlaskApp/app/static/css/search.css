@@ -1,0 +1,25 @@
+  #searchResultTable {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px; /* 위쪽 여백 추가 */
+  }
+  #searchResultTable th, #searchResultTable td {
+    border-left: 2px solid #0666a7;
+    border-right: 2px solid #0666a7;
+    border-top: 2px solid #0666a7;
+    border-bottom: 2px solid #0666a7;
+    text-align: center;
+    padding: 8px;
+  }
+  #searchResultTable th:first-child, #searchResultTable td:first-child {
+    border-left: none;
+  }
+  #searchResultTable th:last-child, #searchResultTable td:last-child {
+    border-right: none;
+  }
+  #searchResultTable tr:first-child th {
+    border-top: none;
+  }
+  #searchResultTable tr:last-child td {
+    border-bottom: none;
+  }

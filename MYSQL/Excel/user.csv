@@ -1,0 +1,5 @@
+USER_CODE,USER_ID,USER_PASSWORD,USER_LEVEL
+1,normal_user_test,test1,1
+2,high_user_test,test1,2
+3,administrator_test,test1,3
+4,kimminse,test2,3

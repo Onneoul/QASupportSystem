@@ -6,25 +6,83 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
 </head>
 <body>
-  <div class="container">
-    <div class="menu">
-      <div class="menu-items">
-        <a href="#">Main</a>
-        <a href="#">Search</a>
-        <a href="#" class="logout-button">Logout</a>
-      </div>
-    </div>
-    <div class="content">
+    <div class="DashboardTop">
       <div class="title">
-        <h1>Title</h1>
+        <h1>Dashboard</h1>
         <div class="title-underline"></div>
       </div>
-      <div class="main-content">
-        <p>Contents</p>
-      </div>
-      <div class="footer">
-        <div class="footer-underline"></div>
-        <p>Footer</p>
+    </div>
+      <div class="DashBoardContainer">
+        <div id="dashBoardContent">
+          <table>
+          <p>총 발견된 버그 수 : {{ bug_counts[0] }}개</p><br>
+          <p>미 검토된 버그 : {{ bug_counts[1] }}개</p>
+          <p>검토 중인 버그 : {{ bug_counts[2] }}개</p>
+          <p>검토된 버그: {{ bug_counts[3] }}개</p>
+          </table>
+        </div>
+        <div id="DashBoardUnderLine"></div>
+
+        <div id="caseSummary">
+          <div id="testCaseArea">
+            <div class="tableTitle">Test Case
+              <!-- <a href="{{ url_for('search', case_code='T', ) }}" class="viewAll">View all</a> -->
+              <!-- <form id="testViewAll" action="/search" method="post" style="display: inline;">
+                <input type="hidden" name="game_version" value="">
+                <input type="hidden" name="bug_status" value="3">
+                <input type="hidden" name="tables" value="3" class="test_case" checked>
+                <input type="hidden" name="tables" value="3" class="bug_case">
+                <button type="submit" style="background: none; border: none; color: black; text-decoration: underline; cursor: pointer;">View All</button>
+              </form> -->
+            </div>
+            <div class="underLine"></div>
+            {% if test_cases %}
+            <table class="testCaseTable">
+                {% for test_case in test_cases %}
+                    <tr>
+                        <td><a href="searchDetail?case_id={{test_case[0]}}">{{ test_case[0] }}</a></td>
+                        <td>{{ test_case[1] }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ test_case[2] }}</td>
+                        <td>{{ test_case[3] }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+            {% endif %}
+          </div>
+
+          <div id="bugCaseArea">
+            <div class="tableTitle">Bug Case
+              <!-- <a href="{{ url_for('search', case_code='B') }}" class="viewAll">View all</a> -->
+            </div>
+            <div class="underLine"></div>
+            {% if bug_cases %}
+            <table class="bugCaseTable">
+                {% for bug_case in bug_cases %}
+                    <tr>
+                        <td><a href="searchDetail?case_id={{bug_case[0]}}">{{ bug_case[0] }}</a></td>
+                        <td>{{ bug_case[1] }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ bug_case[2] }}</td>
+                        <td>
+                            {% if bug_case[3] == 0 %}
+                                검토 전
+                            {% elif bug_case[3] == 1 %}
+                                검토 중
+                            {% elif bug_case[3] == 2 %}
+                                검토 완료
+                            {% else %}
+                                <!-- Other cases -->
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+            {% endif %}
+          </div>
+        </div>
       </div>
     </div>
   </div>

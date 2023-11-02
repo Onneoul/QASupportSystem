@@ -1,21 +1,21 @@
 import configparser
 
-# configparser °´Ã¼ »ı¼º
+# configparser ê°ì²´ ìƒì„±
 config = configparser.ConfigParser()
 
-# ¼³Á¤ ÆÄÀÏ ÀĞ±â
+# ì„¤ì • íŒŒì¼ ì½ê¸°
 config.read('config.ini')
 config.sections()
 
 print('db' in config)
 
-# ¼³Á¤ °ª ¾ò±â
+# ì„¤ì • ê°’ ì–»ê¸°
 db_host = config.get('db', 'host')
 db_port = config.get('db', 'port')
 db_username = config.get('db', 'username')
 db_password = config.get('db', 'password')
 
-# ÀĞ¾î¿Â ¼³Á¤ °ª »ç¿ë
+# ì½ì–´ì˜¨ ì„¤ì • ê°’ ì‚¬ìš©
 print(f"db Host: {db_host}")
 print(f"db Port: {db_port}")
 print(f"db Username: {db_username}")

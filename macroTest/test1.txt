@@ -1,0 +1,179 @@
+{'type': 'mouse_move', 'position': (214, 215), 'timestamp': 1697520687.2968814}
+{'type': 'mouse_move', 'position': (213, 238), 'timestamp': 1697520687.4039056}
+{'type': 'mouse_move', 'position': (221, 276), 'timestamp': 1697520687.5159307}
+{'type': 'mouse_move', 'position': (223, 278), 'timestamp': 1697520687.6269553}
+{'type': 'mouse_move', 'position': (246, 312), 'timestamp': 1697520687.737981}
+{'type': 'mouse_move', 'position': (378, 682), 'timestamp': 1697520687.8470047}
+{'type': 'mouse_move', 'position': (315, 964), 'timestamp': 1697520687.9570296}
+{'type': 'mouse_move', 'position': (202, 999), 'timestamp': 1697520688.0650547}
+{'type': 'mouse_move', 'position': (176, 1040), 'timestamp': 1697520688.17408}
+{'type': 'mouse_move', 'position': (170, 1053), 'timestamp': 1697520688.285104}
+{'type': 'mouse_move', 'position': (170, 1053), 'timestamp': 1697520688.394128}
+{'type': 'mouse_move', 'position': (167, 1045), 'timestamp': 1697520688.5031526}
+{'type': 'mouse_move', 'position': (167, 1045), 'timestamp': 1697520688.6146853}
+{'type': 'mouse_move', 'position': (167, 1045), 'timestamp': 1697520688.72471}
+{'type': 'mouse_move', 'position': (167, 1058), 'timestamp': 1697520688.833734}
+{'type': 'mouse_move', 'position': (184, 1064), 'timestamp': 1697520688.9427583}
+{'type': 'mouse_move', 'position': (592, 1079), 'timestamp': 1697520689.0527837}
+{'type': 'mouse_move', 'position': (853, 1066), 'timestamp': 1697520689.1628084}
+{'type': 'mouse_move', 'position': (850, 1065), 'timestamp': 1697520689.2708328}
+{'type': 'mouse_move', 'position': (768, 1060), 'timestamp': 1697520689.3798573}
+{'type': 'mouse_move', 'position': (763, 1060), 'timestamp': 1697520689.488882}
+{'type': 'mouse_move', 'position': (767, 1059), 'timestamp': 1697520689.5969055}
+{'type': 'mouse_move', 'position': (808, 1012), 'timestamp': 1697520689.7069306}
+{'type': 'mouse_move', 'position': (833, 982), 'timestamp': 1697520689.814955}
+{'type': 'mouse_move', 'position': (836, 976), 'timestamp': 1697520689.9229794}
+{'type': 'mouse_move', 'position': (926, 762), 'timestamp': 1697520690.0328457}
+{'type': 'mouse_move', 'position': (974, 634), 'timestamp': 1697520690.1418796}
+{'type': 'mouse_move', 'position': (980, 634), 'timestamp': 1697520690.2499044}
+{'type': 'mouse_move', 'position': (980, 634), 'timestamp': 1697520690.3589282}
+{'type': 'down', 'input': 'r', 'timestamp': 1697520690.416942}
+{'type': 'mouse_move', 'position': (980, 634), 'timestamp': 1697520690.4679532}
+{'type': 'up', 'input': 'r', 'timestamp': 1697520690.5029607}
+{'type': 'mouse_move', 'position': (980, 634), 'timestamp': 1697520690.5759797}
+{'type': 'down', 'input': 'backspace', 'timestamp': 1697520690.633993}
+{'type': 'mouse_move', 'position': (980, 634), 'timestamp': 1697520690.6850047}
+{'type': 'up', 'input': 'backspace', 'timestamp': 1697520690.7580214}
+{'type': 'mouse_move', 'position': (980, 634), 'timestamp': 1697520690.7940288}
+{'type': 'down', 'input': 'right alt', 'timestamp': 1697520690.9020534}
+{'type': 'mouse_move', 'position': (980, 634), 'timestamp': 1697520690.9040534}
+{'type': 'up', 'input': 'right alt', 'timestamp': 1697520690.9880729}
+{'type': 'mouse_move', 'position': (980, 634), 'timestamp': 1697520691.013078}
+{'type': 'down', 'input': 'r', 'timestamp': 1697520691.0460858}
+{'type': 'mouse_move', 'position': (980, 634), 'timestamp': 1697520691.1221025}
+{'type': 'down', 'input': 'k', 'timestamp': 1697520691.138106}
+{'type': 'up', 'input': 'r', 'timestamp': 1697520691.1481087}
+{'type': 'up', 'input': 'k', 'timestamp': 1697520691.2241256}
+{'type': 'down', 'input': 's', 'timestamp': 1697520691.228127}
+{'type': 'mouse_move', 'position': (980, 634), 'timestamp': 1697520691.2321274}
+{'type': 'up', 'input': 's', 'timestamp': 1697520691.319147}
+{'type': 'down', 'input': 'k', 'timestamp': 1697520691.3261485}
+{'type': 'mouse_move', 'position': (980, 634), 'timestamp': 1697520691.3401523}
+{'type': 'down', 'input': 'e', 'timestamp': 1697520691.3841617}
+{'type': 'up', 'input': 'k', 'timestamp': 1697520691.3961647}
+{'type': 'mouse_move', 'position': (980, 634), 'timestamp': 1697520691.4501765}
+{'type': 'up', 'input': 'e', 'timestamp': 1697520691.4591784}
+{'type': 'down', 'input': 'k', 'timestamp': 1697520691.487185}
+{'type': 'down', 'input': 'f', 'timestamp': 1697520691.5511994}
+{'type': 'mouse_move', 'position': (980, 634), 'timestamp': 1697520691.559201}
+{'type': 'up', 'input': 'k', 'timestamp': 1697520691.5682037}
+{'type': 'up', 'input': 'f', 'timestamp': 1697520691.632218}
+{'type': 'down', 'input': 'k', 'timestamp': 1697520691.6542225}
+{'type': 'mouse_move', 'position': (980, 634), 'timestamp': 1697520691.6682265}
+{'type': 'down', 'input': 'a', 'timestamp': 1697520691.695232}
+{'type': 'up', 'input': 'k', 'timestamp': 1697520691.735241}
+{'type': 'mouse_move', 'position': (980, 634), 'timestamp': 1697520691.77625}
+{'type': 'up', 'input': 'a', 'timestamp': 1697520691.7872524}
+{'type': 'down', 'input': 'k', 'timestamp': 1697520691.8102582}
+{'type': 'mouse_move', 'position': (980, 634), 'timestamp': 1697520691.8842747}
+{'type': 'down', 'input': 'q', 'timestamp': 1697520691.8892758}
+{'type': 'up', 'input': 'k', 'timestamp': 1697520691.8912764}
+{'type': 'up', 'input': 'q', 'timestamp': 1697520691.9752953}
+{'type': 'mouse_move', 'position': (980, 634), 'timestamp': 1697520691.993299}
+{'type': 'down', 'input': 'k', 'timestamp': 1697520691.9982998}
+{'type': 'up', 'input': 'k', 'timestamp': 1697520692.0633147}
+{'type': 'down', 'input': 't', 'timestamp': 1697520692.0733168}
+{'type': 'mouse_move', 'position': (980, 634), 'timestamp': 1697520692.1023233}
+{'type': 'up', 'input': 't', 'timestamp': 1697520692.1483338}
+{'type': 'down', 'input': 'k', 'timestamp': 1697520692.1543353}
+{'type': 'mouse_move', 'position': (980, 634), 'timestamp': 1697520692.2103474}
+{'type': 'up', 'input': 'k', 'timestamp': 1697520692.2403548}
+{'type': 'mouse_move', 'position': (980, 634), 'timestamp': 1697520692.3193722}
+{'type': 'mouse_move', 'position': (980, 634), 'timestamp': 1697520692.428397}
+{'type': 'mouse_move', 'position': (980, 634), 'timestamp': 1697520692.5384219}
+{'type': 'down', 'input': 'enter', 'timestamp': 1697520692.6074383}
+{'type': 'mouse_move', 'position': (980, 634), 'timestamp': 1697520692.6464462}
+{'type': 'up', 'input': 'enter', 'timestamp': 1697520692.6824546}
+{'type': 'mouse_move', 'position': (980, 634), 'timestamp': 1697520692.7564707}
+{'type': 'mouse_move', 'position': (980, 634), 'timestamp': 1697520692.8664954}
+{'type': 'mouse_move', 'position': (980, 634), 'timestamp': 1697520692.9765203}
+{'type': 'mouse_move', 'position': (980, 634), 'timestamp': 1697520693.0855455}
+{'type': 'mouse_move', 'position': (980, 634), 'timestamp': 1697520693.1945698}
+{'type': 'mouse_move', 'position': (980, 634), 'timestamp': 1697520693.306595}
+{'type': 'mouse_move', 'position': (921, 451), 'timestamp': 1697520693.415775}
+{'type': 'mouse_move', 'position': (876, 397), 'timestamp': 1697520693.5249996}
+{'type': 'mouse_move', 'position': (869, 401), 'timestamp': 1697520693.633566}
+{'type': 'mouse_move', 'position': (869, 401), 'timestamp': 1697520693.7407045}
+{'type': 'mouse_move', 'position': (869, 402), 'timestamp': 1697520693.8495977}
+{'type': 'mouse_move', 'position': (726, 505), 'timestamp': 1697520693.959043}
+{'type': 'mouse_move', 'position': (639, 358), 'timestamp': 1697520694.0675807}
+{'type': 'mouse_move', 'position': (565, 240), 'timestamp': 1697520694.1756048}
+{'type': 'mouse_move', 'position': (565, 240), 'timestamp': 1697520694.286598}
+{'type': 'mouse_move', 'position': (615, 230), 'timestamp': 1697520694.3956687}
+{'type': 'mouse_move', 'position': (622, 228), 'timestamp': 1697520694.5037494}
+{'type': 'mouse_move', 'position': (622, 228), 'timestamp': 1697520694.61378}
+{'type': 'mouse_move', 'position': (622, 227), 'timestamp': 1697520694.7233083}
+{'type': 'mouse_move', 'position': (623, 228), 'timestamp': 1697520694.8328383}
+{'type': 'mouse_move', 'position': (635, 241), 'timestamp': 1697520694.942863}
+{'type': 'mouse_move', 'position': (640, 248), 'timestamp': 1697520695.0548887}
+{'type': 'mouse_move', 'position': (647, 255), 'timestamp': 1697520695.1669145}
+{'type': 'mouse_move', 'position': (647, 255), 'timestamp': 1697520695.2789388}
+{'type': 'mouse_move', 'position': (647, 255), 'timestamp': 1697520695.3909645}
+{'type': 'mouse_move', 'position': (730, 262), 'timestamp': 1697520695.5009887}
+{'type': 'mouse_move', 'position': (807, 253), 'timestamp': 1697520695.611014}
+{'type': 'mouse_move', 'position': (813, 254), 'timestamp': 1697520695.7200384}
+{'type': 'mouse_move', 'position': (846, 271), 'timestamp': 1697520695.8270626}
+{'type': 'mouse_move', 'position': (846, 271), 'timestamp': 1697520695.937087}
+{'type': 'mouse_move', 'position': (846, 271), 'timestamp': 1697520696.0491128}
+{'type': 'mouse_move', 'position': (846, 271), 'timestamp': 1697520696.1591368}
+{'type': 'mouse_move', 'position': (846, 271), 'timestamp': 1697520696.2691617}
+{'type': 'mouse_move', 'position': (837, 275), 'timestamp': 1697520696.3791866}
+{'type': 'mouse_move', 'position': (643, 320), 'timestamp': 1697520696.4892113}
+{'type': 'mouse_move', 'position': (628, 326), 'timestamp': 1697520696.599236}
+{'type': 'mouse_move', 'position': (628, 326), 'timestamp': 1697520696.7102616}
+{'type': 'mouse_move', 'position': (628, 326), 'timestamp': 1697520696.818286}
+{'type': 'mouse_move', 'position': (617, 298), 'timestamp': 1697520696.9273098}
+{'type': 'mouse_move', 'position': (611, 271), 'timestamp': 1697520697.0353355}
+{'type': 'mouse_move', 'position': (624, 236), 'timestamp': 1697520697.1453598}
+{'type': 'mouse_move', 'position': (624, 236), 'timestamp': 1697520697.2553847}
+{'type': 'mouse_move', 'position': (624, 236), 'timestamp': 1697520697.3654094}
+{'type': 'mouse_move', 'position': (665, 246), 'timestamp': 1697520697.4734333}
+{'type': 'mouse_move', 'position': (667, 250), 'timestamp': 1697520697.5834577}
+{'type': 'mouse_move', 'position': (667, 250), 'timestamp': 1697520697.692482}
+{'type': 'mouse_move', 'position': (788, 257), 'timestamp': 1697520697.801507}
+{'type': 'mouse_move', 'position': (868, 260), 'timestamp': 1697520697.9095314}
+{'type': 'mouse_move', 'position': (868, 260), 'timestamp': 1697520698.0185564}
+{'type': 'mouse_move', 'position': (866, 260), 'timestamp': 1697520698.1285808}
+{'type': 'mouse_move', 'position': (561, 331), 'timestamp': 1697520698.2376056}
+{'type': 'mouse_move', 'position': (525, 341), 'timestamp': 1697520698.3456357}
+{'type': 'mouse_move', 'position': (525, 341), 'timestamp': 1697520698.454476}
+{'type': 'mouse_move', 'position': (498, 325), 'timestamp': 1697520698.5645702}
+{'type': 'mouse_move', 'position': (395, 281), 'timestamp': 1697520698.6732633}
+{'type': 'mouse_move', 'position': (273, 263), 'timestamp': 1697520698.7826066}
+{'type': 'mouse_move', 'position': (248, 262), 'timestamp': 1697520698.8916426}
+{'type': 'mouse_move', 'position': (234, 268), 'timestamp': 1697520698.9994287}
+{'type': 'mouse_move', 'position': (216, 278), 'timestamp': 1697520699.1084208}
+{'type': 'mouse_move', 'position': (211, 280), 'timestamp': 1697520699.2155457}
+{'type': 'mouse_move', 'position': (211, 280), 'timestamp': 1697520699.3255756}
+{'type': 'mouse_move', 'position': (211, 280), 'timestamp': 1697520699.4335954}
+{'type': 'mouse_move', 'position': (211, 279), 'timestamp': 1697520699.5405107}
+{'type': 'mouse_move', 'position': (331, 334), 'timestamp': 1697520699.6485238}
+{'type': 'mouse_move', 'position': (583, 430), 'timestamp': 1697520699.755238}
+{'type': 'mouse_move', 'position': (657, 457), 'timestamp': 1697520699.8637016}
+{'type': 'mouse_move', 'position': (711, 495), 'timestamp': 1697520699.9704154}
+{'type': 'mouse_move', 'position': (704, 525), 'timestamp': 1697520700.0788329}
+{'type': 'mouse_move', 'position': (705, 570), 'timestamp': 1697520700.1885934}
+{'type': 'mouse_move', 'position': (718, 587), 'timestamp': 1697520700.2976282}
+{'type': 'mouse_move', 'position': (723, 591), 'timestamp': 1697520700.4074078}
+{'type': 'mouse_move', 'position': (725, 593), 'timestamp': 1697520700.516869}
+{'type': 'mouse_move', 'position': (707, 588), 'timestamp': 1697520700.6258938}
+{'type': 'mouse_move', 'position': (473, 458), 'timestamp': 1697520700.7349184}
+{'type': 'mouse_move', 'position': (400, 411), 'timestamp': 1697520700.8429427}
+{'type': 'mouse_move', 'position': (395, 404), 'timestamp': 1697520700.9529676}
+{'type': 'mouse_move', 'position': (381, 393), 'timestamp': 1697520701.0609918}
+{'type': 'mouse_move', 'position': (381, 393), 'timestamp': 1697520701.1690166}
+{'type': 'mouse_move', 'position': (359, 517), 'timestamp': 1697520701.279041}
+{'type': 'mouse_move', 'position': (371, 557), 'timestamp': 1697520701.3860652}
+{'type': 'mouse_move', 'position': (463, 607), 'timestamp': 1697520701.4970899}
+{'type': 'mouse_move', 'position': (819, 649), 'timestamp': 1697520701.6051147}
+{'type': 'mouse_move', 'position': (857, 656), 'timestamp': 1697520701.7171395}
+{'type': 'mouse_move', 'position': (915, 665), 'timestamp': 1697520701.8261642}
+{'type': 'mouse_move', 'position': (919, 667), 'timestamp': 1697520701.936189}
+{'type': 'mouse_move', 'position': (919, 663), 'timestamp': 1697520702.0442135}
+{'type': 'mouse_move', 'position': (887, 598), 'timestamp': 1697520702.1524618}
+{'type': 'mouse_move', 'position': (895, 546), 'timestamp': 1697520702.262733}
+{'type': 'mouse_move', 'position': (993, 527), 'timestamp': 1697520702.3719163}
+{'type': 'mouse_move', 'position': (997, 527), 'timestamp': 1697520702.4804652}
+{'type': 'mouse_move', 'position': (997, 527), 'timestamp': 1697520702.588705}
+{'type': 'mouse_move', 'position': (997, 527), 'timestamp': 1697520702.696835}
+{'type': 'mouse_move', 'position': (996, 527), 'timestamp': 1697520702.80645}

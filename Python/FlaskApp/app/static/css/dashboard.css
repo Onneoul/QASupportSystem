@@ -12,25 +12,15 @@ body, html {
     min-height: 100vh;
   }
   
-  .menu {
-    background-color: #f0f0f0;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+
+  #testCaseArea, #bugCaseArea {
+    width: calc(50% - 20px); /* 전체 너비의 50%에서 좌우 마진 20px을 제외 */
+    float: left; /* 두 div를 좌우에 배치 */
+    margin-left: 10px;
+    margin-right: 10px;
   }
-  
-  .menu-items {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .menu a {
-    text-decoration: none;
-    color: black;
-    margin: 10px 0;
+  #caseSummary {
+    margin-top: 20px;
   }
   
   .logout-button {
@@ -49,32 +39,25 @@ body, html {
     grid-gap: 10px;
     padding: 20px;
   }
-  
-  .title {
-    border-bottom: 3px solid #3498db;
-    padding: 10px 0;
+
+  .tableTitle {
+    font-weight: 700;  /* h2 급 굵기 */
+    display: flex;
+    justify-content: space-between;
+}
+
+  .viewAll {
+      text-align: right; /* 오른쪽 끝에 붙게 */
   }
-  
-  .title h1 {
-    margin: 0;
+
+  #DashBoardUnderLine {
+    border-bottom: 4px solid #3498db;
+    box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2);
   }
-  
-  .main-content {
-    background-color: #ffffff;
-    padding: 20px;
-  }
-  
-  .footer {
-    color: black;
-    text-align: center;
-    position: relative;
-  }
-  
-  .footer-underline {
+
+  .hiddenCheckbox {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: black;
-  }
+    opacity: 0;
+    z-index: -1;
+}
+  

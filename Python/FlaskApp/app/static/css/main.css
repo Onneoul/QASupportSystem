@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+  }
+  
+  section {
+    display: grid;
+    grid-template-columns: 1fr 6fr; /* Menubar 1/7, Container 6/7 */
+    grid-template-rows: 1fr;
+  }
+  
+  .MenuBar {
+    grid-column: 1 / 2;
+    background-color: #3498db;
+    height: 100vh; /* 100% of the viewport height */
+    margin-left: 20px;
+
+    display: flex;
+    flex-direction: column; /* 수직으로 아이템을 배열 */
+    justify-content: center;
+    align-items: center;
+  }
+  .menuItem {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 2em;
+      color: white;
+      margin: 20px 0; /* 위아래로 10px 마진을 추가 */
+  }
+
+  .menuItem a {
+      text-decoration: none;
+      border-bottom: 2px solid white;
+      color: inherit;
+  }
+
+  .Container {
+    grid-column: 2 / 3;
+    background-color: #f7f7f7;
+    height: 100vh;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+
+    /* overflow-y: auto; */
+  }
+  
+  /* Responsive */
+  @media (max-width: 950px) {
+    .MenuBar {
+        margin-left: 10px;
+      }
+      
+      .Container {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
+  @media (max-width: 850px) {
+    .MenuBar {
+        margin: 0px;
+      }
+      
+      .Container {
+        margin: 0px;
+      }
+    }
+  @media (max-width: 670px) { /* Smaller than typical smartphone */
+    section {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 8fr; /* Menubar 1/9, Container 8/9 */
+    }
+    .MenuBar {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      height: calc(100vh / 9); /* 1/8 of the viewport height */
+    }
+    .Container {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      height: calc(8 * 100vh / 9); /* 7/8 of the viewport height */
+    }
+  }
+
+  
+  
+  .title {
+    border-bottom: 3px solid #3498db;
+    padding: 10px;
+  }
+  
+  .title h1 {
+    margin: 0;
+  }
+  
+  .main-content {
+    background-color: #ffffff;
+    padding: 20px;
+  }
+  
+  .footer {
+    color: black;
+    text-align: center;
+    position: relative;
+  }
+  
+  .footer-underline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+  }
+  
+  .underLine {
+    border-bottom: 2px solid #3498db;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+  }
+

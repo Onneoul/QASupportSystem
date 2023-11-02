@@ -13,8 +13,8 @@ class macro:
         self.root = root
 
         self.macro_actions = []
-        keyboard.add_hotkey('F10', self.save_only)  # F10 Å°·Î Áö±İ±îÁöÀÇ ¸ÅÅ©·Î¸¸ ÀúÀå
-        self.root = root  # Tkinter root ÀÎ½ºÅÏ½º
+        keyboard.add_hotkey('F10', self.save_only)  # F10 í‚¤ë¡œ ì§€ê¸ˆê¹Œì§€ì˜ ë§¤í¬ë¡œë§Œ ì €ì¥
+        self.root = root  # Tkinter root ì¸ìŠ¤í„´ìŠ¤
 
         self.folder_label = tk.Label(root, text="Selected Folder:")
         self.folder_label.pack()
@@ -45,10 +45,20 @@ class macro:
         action = {
             "type": e.event_type,
             "input": e.name if e.event_type == keyboard.KEY_DOWN else None,
-            "position": pyautogui.position(),
+            "position": pyautogui.position(),  # ì´ ë¶€ë¶„ì„ (x, y) ì¢Œí‘œë¡œ ì €ì¥
             "timestamp": time.time()
         }
+        x, y = action["position"]
+        action["position"] = (x, y)
         self.macro_actions.append(action)
+    # def record_action(self, e):
+    #     action = {
+    #         "type": e.event_type,
+    #         "input": e.name if e.event_type == keyboard.KEY_DOWN else None,
+    #         "position": pyautogui.position(),
+    #         "timestamp": time.time()
+    #     }
+    #     self.macro_actions.append(action)
 
     def stop_recording(self):
         keyboard.unhook_all()
@@ -66,15 +76,37 @@ class macro:
         if file_path:
             with open(file_path, "r") as file:
                 actions = file.readlines()
+                prev_time = None
                 for action in actions:
-                    eval_action = eval(action)
-                    time.sleep(eval_action["timestamp"] - time.time())
+                    eval_action = eval(action.strip())
+                    cur_time = eval_action["timestamp"]
+                    
+                    if prev_time is not None:
+                        time.sleep(cur_time - prev_time)
+                    
+                    prev_time = cur_time
+
                     if eval_action["type"] == keyboard.KEY_DOWN:
                         keyboard.press(eval_action["input"])
                     elif eval_action["type"] == keyboard.KEY_UP:
                         keyboard.release(eval_action["input"])
                     else:
-                        pyautogui.moveTo(eval_action["position"])
+                        x, y = eval_action["position"]
+                        pyautogui.moveTo(x, y)  # ì´ ë¶€ë¶„ì„ (x, y) ì¢Œí‘œë¡œ ë³€í™˜
+    # def load_and_play_macro(self):
+    #     file_path = filedialog.askopenfilename(filetypes=[("Text Files", "*.txt")])
+    #     if file_path:
+    #         with open(file_path, "r") as file:
+    #             actions = file.readlines()
+    #             for action in actions:
+    #                 eval_action = eval(action)
+    #                 time.sleep(eval_action["timestamp"] - time.time())
+    #                 if eval_action["type"] == keyboard.KEY_DOWN:
+    #                     keyboard.press(eval_action["input"])
+    #                 elif eval_action["type"] == keyboard.KEY_UP:
+    #                     keyboard.release(eval_action["input"])
+    #                 else:
+    #                     pyautogui.moveTo(eval_action["position"])
 
     def select_folder(self):
         folder_path = filedialog.askdirectory()
@@ -84,34 +116,34 @@ class macro:
 
     def load_macro_files(self, folder_path):
         macro_files = [file for file in os.listdir(folder_path) if file.endswith(".txt")]
-        self.macro_listbox.delete(0, tk.END)  # ±âÁ¸ ¸ñ·Ï »èÁ¦
+        self.macro_listbox.delete(0, tk.END)  # ê¸°ì¡´ ëª©ë¡ ì‚­ì œ
         for file in macro_files:
             self.macro_listbox.insert(tk.END, file)
             
-    # F10À» ´©¸£¸é ¸ÅÅ©·Î ¾×¼ÇÀ» ÆÄÀÏ¿¡ ÀúÀåÇÕ´Ï´Ù.
+    # F10ì„ ëˆ„ë¥´ë©´ ë§¤í¬ë¡œ ì•¡ì…˜ì„ íŒŒì¼ì— ì €ì¥í•©ë‹ˆë‹¤.
     def save_only(self, folder_path):
-        # ÆÄÀÏ ÀÌ¸§À» ÇöÀç ½Ã°£À¸·Î ¼³Á¤ - ³ªÁß¿¡ ¼öÁ¤
+        # íŒŒì¼ ì´ë¦„ì„ í˜„ì¬ ì‹œê°„ìœ¼ë¡œ ì„¤ì • - ë‚˜ì¤‘ì— ìˆ˜ì •
         current_time = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
         file_name = f"NonPlaythroughMacro_{current_time}.txt"
-        file_path = f"{folder_path}/{file_name}"  # »çÀü¿¡ Á¤ÀÇµÈ Æú´õ °æ·Î
+        file_path = f"{folder_path}/{file_name}"  # ì‚¬ì „ì— ì •ì˜ëœ í´ë” ê²½ë¡œ
 
-        # ¸ÅÅ©·Î¸¦ ÆÄÀÏ¿¡ ÀúÀå
+        # ë§¤í¬ë¡œë¥¼ íŒŒì¼ì— ì €ì¥
         with open(file_path, "w") as file:
             for action in self.macro_actions:
                 file.write(str(action) + "\n")
 
-        # ¿À¹ö·¹ÀÌ ¸Ş½ÃÁö¸¦ Ç¥½Ã
+        # ì˜¤ë²„ë ˆì´ ë©”ì‹œì§€ë¥¼ í‘œì‹œ
         self.show_overlay("Macro saved successfully.")
 
-    # ¿À¹ö·¹ÀÌ ¸Ş½ÃÁö Ç¥½Ã ¸Ş¼­µå
+    # ì˜¤ë²„ë ˆì´ ë©”ì‹œì§€ í‘œì‹œ ë©”ì„œë“œ
     def show_overlay(self, message):
         overlay = tk.Toplevel(self.root)
-        overlay.geometry("300x50+600+400")  # À§Ä¡¿Í Å©±â ¼³Á¤
-        overlay.attributes("-alpha", 0.8)  # Åõ¸íµµ ¼³Á¤
-        overlay.attributes("-topmost", True)  # Ç×»ó À§¿¡ Ç¥½Ã
+        overlay.geometry("300x50+600+400")  # ìœ„ì¹˜ì™€ í¬ê¸° ì„¤ì •
+        overlay.attributes("-alpha", 0.8)  # íˆ¬ëª…ë„ ì„¤ì •
+        overlay.attributes("-topmost", True)  # í•­ìƒ ìœ„ì— í‘œì‹œ
         tk.Label(overlay, text=message).pack()
         
-        # 3ÃÊ ÈÄ¿¡ ¿À¹ö·¹ÀÌ Á¦°Å
+        # 3ì´ˆ í›„ì— ì˜¤ë²„ë ˆì´ ì œê±°
         overlay.after(3000, overlay.destroy)
             
 if __name__ == "__main__":

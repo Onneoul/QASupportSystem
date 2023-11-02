@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
 from game_Info_Manage import game_Info_Manage
-from screenshot_App import screenshot_App
+from ScreenshotApp import ScreenshotApp
 from macro import macro
 from setting import setting
 from login import login_App
@@ -12,6 +12,7 @@ import configparser
 # Config section
 config = configparser.ConfigParser()
 config.read('config.ini')
+root = None 
 
 # DB
 db_host = config.get('database', 'host')
@@ -29,48 +30,54 @@ db_connection = mysql.connector.connect(
 )
 cursor = db_connection.cursor()
 
-# ∑Œ±◊¿Œ ªÛ≈¬ ∫Øºˆ
-is_logged_in = False
+# login Ï≤¥ÌÅ¨Î•º ÏúÑÌïú class
+class LoginStatus:
+    def __init__(self):
+        self.is_logged_in = False
+        self.user_code = None
+    
+    def set_login_status(self, status, user_code=None):
+        self.is_logged_in = status
+        self.user_code = user_code
+        
+        if status:
+            create_tabs(notebook, root)
+        
+login_status = LoginStatus()
 
-def create_tabs(notebook):
-    global is_logged_in
+def create_tabs(notebook, root):
 
-    # Login Tab
+    for tab in notebook.tabs():
+        notebook.forget(tab)
+
     login_tab = ttk.Frame(notebook)
     notebook.add(login_tab, text="Login")
-    login_app = login_App(login_tab, db_connection, cursor)
+    login_app = login_App(login_tab, db_connection, cursor, login_status)
 
     # Tab 1
     tab1 = ttk.Frame(notebook)
     notebook.add(tab1, text="Game Info")
-    app1 = game_Info_Manage(tab1)
+    app1 = game_Info_Manage(root, tab1, login_status)
 
     # Tab 2
     tab2 = ttk.Frame(notebook)
-    notebook.add(tab2, text="Screenshot")
-    app2 = screenshot_App(tab2)
+    notebook.add(tab2, text="Macro_Recorder")
+    app2 = macro(tab2)
 
-    # Tab 3
     tab3 = ttk.Frame(notebook)
-    notebook.add(tab3, text="Macro_Recorder")
-    app3 = macro(tab3)
+    notebook.add(tab3, text="Setting")
+    app3 = setting(tab3)
 
-    # Tab 4
-    tab4 = ttk.Frame(notebook)
-    notebook.add(tab4, text="Setting")
-    app4 = setting(tab4)
-
-    return app4
+    return app3
 
 def on_tab_change(event):
-    global is_logged_in
 
     selected_tab = notebook.select()
     tab_name = notebook.tab(selected_tab, "text")
     
-    if not is_logged_in and tab_name != "Login":
+    if not login_status.is_logged_in and tab_name != "Login":
         messagebox.showwarning("Need Login", "Please Login First.")
-        notebook.select(0)  # ∑Œ±◊¿Œ ≈«¿∏∑Œ ¿Ãµø
+        notebook.select(0)  # Î°úÍ∑∏Ïù∏ ÌÉ≠ÏúºÎ°ú Ïù¥Îèô
 
     elif tab_name == "Setting":
         app.read_config()
@@ -84,6 +91,6 @@ if __name__ == "__main__":
     notebook.pack(fill=tk.BOTH, expand=True)
     notebook.bind("<<NotebookTabChanged>>", on_tab_change)
 
-    app = create_tabs(notebook)
+    app = create_tabs(notebook, root)
 
     root.mainloop()

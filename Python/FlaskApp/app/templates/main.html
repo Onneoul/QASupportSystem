@@ -7,11 +7,28 @@
     <head>
         <meta charset="utf-8">
         <title></title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/search.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/searchDetail.css') }}">
     </head>
     <body>
-        
-        <script src="" async defer></script>
+        <section>
+            <div class="MenuBar">
+                <div class="menuItem">
+                    <a href="dashboard">Home</a>
+                </div>
+                <div class="menuItem">
+                    <a href="search">Search</a>
+                </div>
+                <div class="menuItem">
+                    <a href="logout">LogOut</a>
+                </div>
+            </div>
+            <div class="Container">
+                {% include template_name %}
+            </div>
+        </section>
     </body>
 </html>

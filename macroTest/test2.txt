@@ -1,0 +1,168 @@
+{'type': 'mouse_move', 'position': (-420, 357), 'timestamp': 30084.109}
+{'type': 'mouse_move', 'position': (-331, 365), 'timestamp': 30084.218}
+{'type': 'mouse_move', 'position': (525, 522), 'timestamp': 30084.312}
+{'type': 'mouse_move', 'position': (864, 547), 'timestamp': 30084.406}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30084.515}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30084.609}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30084.718}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30084.812}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30084.921}
+{'type': 'down', 'input': 'r', 'timestamp': 30084.953}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30085.015}
+{'type': 'up', 'input': 'r', 'timestamp': 30085.046}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30085.125}
+{'type': 'down', 'input': 'backspace', 'timestamp': 30085.156}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30085.218}
+{'type': 'up', 'input': 'backspace', 'timestamp': 30085.25}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30085.312}
+{'type': 'down', 'input': 'right alt', 'timestamp': 30085.406}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30085.421}
+{'type': 'up', 'input': 'right alt', 'timestamp': 30085.468}
+{'type': 'down', 'input': 'r', 'timestamp': 30085.484}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30085.515}
+{'type': 'up', 'input': 'r', 'timestamp': 30085.593}
+{'type': 'down', 'input': 'k', 'timestamp': 30085.609}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30085.625}
+{'type': 'down', 'input': 's', 'timestamp': 30085.671}
+{'type': 'up', 'input': 'k', 'timestamp': 30085.687}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30085.718}
+{'type': 'down', 'input': 'k', 'timestamp': 30085.765}
+{'type': 'up', 'input': 's', 'timestamp': 30085.765}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30085.828}
+{'type': 'down', 'input': 'e', 'timestamp': 30085.828}
+{'type': 'up', 'input': 'k', 'timestamp': 30085.843}
+{'type': 'up', 'input': 'e', 'timestamp': 30085.906}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30085.921}
+{'type': 'down', 'input': 'k', 'timestamp': 30085.937}
+{'type': 'down', 'input': 'f', 'timestamp': 30085.984}
+{'type': 'up', 'input': 'k', 'timestamp': 30086.015}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30086.031}
+{'type': 'up', 'input': 'f', 'timestamp': 30086.078}
+{'type': 'down', 'input': 'k', 'timestamp': 30086.093}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30086.125}
+{'type': 'down', 'input': 'a', 'timestamp': 30086.14}
+{'type': 'up', 'input': 'k', 'timestamp': 30086.187}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30086.218}
+{'type': 'up', 'input': 'a', 'timestamp': 30086.265}
+{'type': 'down', 'input': 'k', 'timestamp': 30086.265}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30086.328}
+{'type': 'up', 'input': 'k', 'timestamp': 30086.375}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30086.421}
+{'type': 'down', 'input': 'q', 'timestamp': 30086.484}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30086.531}
+{'type': 'down', 'input': 'k', 'timestamp': 30086.609}
+{'type': 'up', 'input': 'q', 'timestamp': 30086.625}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30086.625}
+{'type': 'up', 'input': 'k', 'timestamp': 30086.703}
+{'type': 'down', 'input': 't', 'timestamp': 30086.718}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30086.734}
+{'type': 'up', 'input': 't', 'timestamp': 30086.796}
+{'type': 'down', 'input': 'k', 'timestamp': 30086.812}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30086.828}
+{'type': 'down', 'input': 'd', 'timestamp': 30086.906}
+{'type': 'up', 'input': 'k', 'timestamp': 30086.906}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30086.921}
+{'type': 'up', 'input': 'd', 'timestamp': 30087.015}
+{'type': 'down', 'input': 'k', 'timestamp': 30087.015}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30087.031}
+{'type': 'down', 'input': 'w', 'timestamp': 30087.078}
+{'type': 'up', 'input': 'k', 'timestamp': 30087.109}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30087.125}
+{'type': 'up', 'input': 'w', 'timestamp': 30087.156}
+{'type': 'down', 'input': 'k', 'timestamp': 30087.203}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30087.234}
+{'type': 'down', 'input': 'c', 'timestamp': 30087.265}
+{'type': 'up', 'input': 'k', 'timestamp': 30087.281}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30087.328}
+{'type': 'up', 'input': 'c', 'timestamp': 30087.375}
+{'type': 'down', 'input': 'k', 'timestamp': 30087.406}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30087.437}
+{'type': 'down', 'input': 'z', 'timestamp': 30087.468}
+{'type': 'up', 'input': 'k', 'timestamp': 30087.5}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30087.531}
+{'type': 'up', 'input': 'z', 'timestamp': 30087.578}
+{'type': 'down', 'input': 'k', 'timestamp': 30087.609}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30087.64}
+{'type': 'down', 'input': 'x', 'timestamp': 30087.671}
+{'type': 'up', 'input': 'k', 'timestamp': 30087.703}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30087.734}
+{'type': 'up', 'input': 'x', 'timestamp': 30087.781}
+{'type': 'down', 'input': 'k', 'timestamp': 30087.812}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30087.828}
+{'type': 'down', 'input': 'v', 'timestamp': 30087.89}
+{'type': 'up', 'input': 'k', 'timestamp': 30087.906}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30087.937}
+{'type': 'up', 'input': 'v', 'timestamp': 30087.953}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30088.031}
+{'type': 'down', 'input': 'k', 'timestamp': 30088.125}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30088.14}
+{'type': 'up', 'input': 'k', 'timestamp': 30088.203}
+{'type': 'down', 'input': 'g', 'timestamp': 30088.234}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30088.234}
+{'type': 'up', 'input': 'g', 'timestamp': 30088.328}
+{'type': 'down', 'input': 'k', 'timestamp': 30088.328}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30088.343}
+{'type': 'up', 'input': 'k', 'timestamp': 30088.421}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30088.437}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30088.531}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30088.64}
+{'type': 'mouse_move', 'position': (868, 547), 'timestamp': 30088.734}
+{'type': 'mouse_move', 'position': (869, 546), 'timestamp': 30088.843}
+{'type': 'mouse_move', 'position': (338, 529), 'timestamp': 30088.937}
+{'type': 'mouse_move', 'position': (-66, 463), 'timestamp': 30089.046}
+{'type': 'mouse_move', 'position': (-203, 498), 'timestamp': 30089.14}
+{'type': 'mouse_move', 'position': (-286, 486), 'timestamp': 30089.234}
+{'type': 'mouse_move', 'position': (-377, 400), 'timestamp': 30089.343}
+{'type': 'mouse_move', 'position': (-383, 395), 'timestamp': 30089.437}
+{'type': 'mouse_move', 'position': (-397, 390), 'timestamp': 30089.546}
+{'type': 'mouse_move', 'position': (-402, 390), 'timestamp': 30089.64}
+{'type': 'mouse_move', 'position': (-405, 395), 'timestamp': 30089.75}
+{'type': 'mouse_move', 'position': (-405, 400), 'timestamp': 30089.843}
+{'type': 'mouse_move', 'position': (-405, 404), 'timestamp': 30089.937}
+{'type': 'mouse_move', 'position': (-405, 404), 'timestamp': 30090.046}
+{'type': 'mouse_move', 'position': (-405, 404), 'timestamp': 30090.14}
+{'type': 'mouse_move', 'position': (-405, 404), 'timestamp': 30090.25}
+{'type': 'mouse_move', 'position': (-404, 404), 'timestamp': 30090.343}
+{'type': 'mouse_move', 'position': (-402, 404), 'timestamp': 30090.453}
+{'type': 'mouse_move', 'position': (-402, 404), 'timestamp': 30090.546}
+{'type': 'mouse_move', 'position': (-371, 411), 'timestamp': 30090.656}
+{'type': 'mouse_move', 'position': (-207, 481), 'timestamp': 30090.75}
+{'type': 'mouse_move', 'position': (-108, 559), 'timestamp': 30090.843}
+{'type': 'mouse_move', 'position': (-106, 655), 'timestamp': 30090.953}
+{'type': 'mouse_move', 'position': (-151, 694), 'timestamp': 30091.046}
+{'type': 'mouse_move', 'position': (-238, 674), 'timestamp': 30091.156}
+{'type': 'mouse_move', 'position': (-269, 689), 'timestamp': 30091.25}
+{'type': 'mouse_move', 'position': (-312, 715), 'timestamp': 30091.359}
+{'type': 'mouse_move', 'position': (-354, 740), 'timestamp': 30091.453}
+{'type': 'mouse_move', 'position': (-355, 740), 'timestamp': 30091.562}
+{'type': 'mouse_move', 'position': (-356, 740), 'timestamp': 30091.656}
+{'type': 'mouse_move', 'position': (-356, 740), 'timestamp': 30091.75}
+{'type': 'down', 'input': 't', 'timestamp': 30091.828}
+{'type': 'mouse_move', 'position': (-356, 740), 'timestamp': 30091.859}
+{'type': 'down', 'input': 'e', 'timestamp': 30091.937}
+{'type': 'mouse_move', 'position': (-356, 738), 'timestamp': 30091.953}
+{'type': 'up', 'input': 't', 'timestamp': 30092.0}
+{'type': 'mouse_move', 'position': (-356, 733), 'timestamp': 30092.062}
+{'type': 'down', 'input': 's', 'timestamp': 30092.062}
+{'type': 'down', 'input': 't', 'timestamp': 30092.125}
+{'type': 'up', 'input': 'e', 'timestamp': 30092.14}
+{'type': 'mouse_move', 'position': (-356, 731), 'timestamp': 30092.156}
+{'type': 'up', 'input': 's', 'timestamp': 30092.187}
+{'type': 'mouse_move', 'position': (-356, 731), 'timestamp': 30092.265}
+{'type': 'up', 'input': 't', 'timestamp': 30092.265}
+{'type': 'down', 'input': '2', 'timestamp': 30092.343}
+{'type': 'mouse_move', 'position': (-292, 751), 'timestamp': 30092.359}
+{'type': 'up', 'input': '2', 'timestamp': 30092.421}
+{'type': 'mouse_move', 'position': (-160, 777), 'timestamp': 30092.468}
+{'type': 'mouse_move', 'position': (-96, 797), 'timestamp': 30092.562}
+{'type': 'mouse_move', 'position': (-20, 827), 'timestamp': 30092.656}
+{'type': 'mouse_move', 'position': (25, 843), 'timestamp': 30092.765}
+{'type': 'mouse_move', 'position': (99, 876), 'timestamp': 30092.859}
+{'type': 'mouse_move', 'position': (113, 842), 'timestamp': 30092.968}
+{'type': 'mouse_move', 'position': (117, 815), 'timestamp': 30093.062}
+{'type': 'mouse_move', 'position': (124, 808), 'timestamp': 30093.171}
+{'type': 'mouse_move', 'position': (127, 807), 'timestamp': 30093.265}
+{'type': 'mouse_move', 'position': (127, 806), 'timestamp': 30093.375}
+{'type': 'mouse_move', 'position': (-55, 643), 'timestamp': 30093.468}
+{'type': 'mouse_move', 'position': (-302, 427), 'timestamp': 30093.578}
+{'type': 'mouse_move', 'position': (-405, 344), 'timestamp': 30093.671}
