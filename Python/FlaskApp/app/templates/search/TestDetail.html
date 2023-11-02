@@ -8,14 +8,14 @@
 <body>
     <div id="testDetailArea">
 
-        <div id="performanceArea">
-        <div class="areaTitle">Performance Data</div>
+        <div id="testPerformanceArea">
+        <div class="testAreaTitle">Performance Data
         {% if performance_contents %}
             <div class="downloadButtonArea">
                 <a href="{{ url_for('download', filename=performance_contents[0].performance_path) }}" download class="downloadButton">Download</a>
             </div>
-            <br>
         {% endif %}
+        </div>
         {% for performance in performance_contents %}
                 <div>
                     {{ performance.content|safe }}
@@ -35,14 +35,14 @@
             </div> -->
         </div>
 
-        <div id="logArea">
-        <div class="areaTitle">Log</div>
-        {% if log_contents %}
-        <div class="downloadButtonArea">
-            <a href="{{ url_for('download', filename=log_contents[0].log_path) }}" download class="downloadButton">Download</a>
+        <div id="testLogArea">
+            <div class="testAreaTitle">Log
+            {% if log_contents %}
+            <div class="downloadButtonArea">
+                <a href="{{ url_for('download', filename=log_contents[0].log_path) }}" download class="downloadButton">Download</a>
+            </div>
+            {% endif %}
         </div>
-        <br>
-        {% endif %}
         {% for log in log_contents %}
             <div>
                 {{ log.content|safe }}
@@ -62,8 +62,8 @@
             </div> -->
         </div>
 
-        <div id="bugCasesArea">
-        <div class="areaTitle">Bug Case</div>
+        <div id="testBugCasesArea">
+        <div class="testAreaTitle">Bug Case</div>
         {% for bug_case in bug_cases %}
         <div>
             <table class="testDetailBugCase">
@@ -87,8 +87,8 @@
         {% endfor %}
         </div>
 
-        <div id="caseRecommendArea">
-        <div class="areaTitle">This is case recommend</div>
+        <div id="testCaseRecommendArea">
+        <div class="testAreaTitle">Case recommend</div>
         {% for recommend_case in recommend_cases %}
             <div>
                 <table class="recommendTestCase">

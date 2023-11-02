@@ -108,8 +108,15 @@ def dashboard():
         cursor.execute("select count(*) from bug_case where bug_status = 2")
         bug_complete = cursor.fetchone()[0]
         
+        cursor.execute("select count(*) from test_case")
+        test_total = cursor.fetchone()[0]
+        today_str = datetime.now().strftime("%Y%m%d")
+        cursor.execute("select count(*) from test_case where DATE_FORMAT(test_date, '%%Y%%m%%d') = %s", (today_str,))
+        test_today = cursor.fetchone()[0]
+        
         
         bug_counts = (bug_total, bug_before, bug_do, bug_complete)
+        test_counts = (test_total, test_today)
         
     except Exception as e:
         print(f"DB connect Error: {e}")
@@ -117,7 +124,7 @@ def dashboard():
         cursor.close()
     
     
-    return render_template('main.html', template_name = 'dashboard.html', bug_cases=bug_cases, test_cases=test_cases, bug_counts=bug_counts)
+    return render_template('main.html', template_name = 'dashboard.html', bug_cases=bug_cases, test_cases=test_cases, bug_counts=bug_counts, test_counts=test_counts)
 
 
 @app.route('/search', methods=['GET', 'POST'])
@@ -178,52 +185,53 @@ def search():
                     if 'test_case' in selected_tables:
                         queries.append(f"SELECT test_case_id AS case_id, test_date AS case_date, game_version, NULL AS bug_status FROM test_case WHERE test_date <= '{end_date}'")
                     if 'bug_case' in selected_tables:
-                        if bug_status == 3:
-                            queries.append(f"SELECT bug_case_id AS case_id, bug_date AS case_date, game_version, bug_status FROM bug_case WHERE bug_date <= '{end_date}' AND bug_status = {bug_status}")
-                        else:
+                        if bug_status == '3':
                             queries.append(f"SELECT bug_case_id AS case_id, bug_date AS case_date, game_version, bug_status FROM bug_case WHERE (bug_date <= '{end_date}')")
+                        else:
+                            queries.append(f"SELECT bug_case_id AS case_id, bug_date AS case_date, game_version, bug_status FROM bug_case WHERE bug_date <= '{end_date}' AND bug_status = {bug_status}")
                 else:
                     if 'test_case' in selected_tables:
                         queries.append(f"SELECT test_case_id AS case_id, test_date AS case_date, game_version, NULL AS bug_status FROM test_case WHERE test_date <= '{end_date}' AND (game_version = '{game_version}')")
                     if 'bug_case' in selected_tables:
-                        if bug_status == 3:
-                            queries.append(f"SELECT bug_case_id AS case_id, bug_date AS case_date, game_version, bug_status FROM bug_case WHERE (bug_date <= '{end_date}') AND (game_version = '{game_version}') AND bug_status = {bug_status}")
-                        else:
+                        if bug_status == '3':
                             queries.append(f"SELECT bug_case_id AS case_id, bug_date AS case_date, game_version, bug_status FROM bug_case WHERE (bug_date <= '{end_date}') AND (game_version = '{game_version}')")
+                        else:
+                            queries.append(f"SELECT bug_case_id AS case_id, bug_date AS case_date, game_version, bug_status FROM bug_case WHERE (bug_date <= '{end_date}') AND (game_version = '{game_version}') AND bug_status = {bug_status}")
             elif end_date is None:
                 if game_version is None:
                     if 'test_case' in selected_tables:
                         queries.append(f"SELECT test_case_id AS case_id, test_date AS case_date, game_version, NULL AS bug_status FROM test_case WHERE test_date >= '{start_date}'")
                     if 'bug_case' in selected_tables:
-                        if bug_status == 3:
-                            queries.append(f"SELECT bug_case_id AS case_id, bug_date AS case_date, game_version, bug_status FROM bug_case WHERE bug_date >= '{start_date}' AND bug_status = {bug_status}")
-                        else:
+                        if bug_status == '3':
                             queries.append(f"SELECT bug_case_id AS case_id, bug_date AS case_date, game_version, bug_status FROM bug_case WHERE (bug_date >= '{start_date}')")
+                        else:
+                            queries.append(f"SELECT bug_case_id AS case_id, bug_date AS case_date, game_version, bug_status FROM bug_case WHERE bug_date >= '{start_date}' AND bug_status = {bug_status}")
                 else:
                     if 'test_case' in selected_tables:
                         queries.append(f"SELECT test_case_id AS case_id, test_date AS case_date, game_version, NULL AS bug_status FROM test_case WHERE test_date >= '{start_date}' AND (game_version = '{game_version}')")
                     if 'bug_case' in selected_tables:
-                        if bug_status == 3:
-                            queries.append(f"SELECT bug_case_id AS case_id, bug_date AS case_date, game_version, bug_status FROM bug_case WHERE (bug_date >= '{start_date}') AND (game_version = '{game_version}') AND bug_status = {bug_status}")
-                        else:
+                        if bug_status == '3':
                             queries.append(f"SELECT bug_case_id AS case_id, bug_date AS case_date, game_version, bug_status FROM bug_case WHERE (bug_date >= '{start_date}') AND (game_version = '{game_version}')")
+                        else:
+                            queries.append(f"SELECT bug_case_id AS case_id, bug_date AS case_date, game_version, bug_status FROM bug_case WHERE (bug_date >= '{start_date}') AND (game_version = '{game_version}') AND bug_status = {bug_status}")
             else :
                 if game_version is None:
                     if 'test_case' in selected_tables:
                         queries.append(f"SELECT test_case_id AS case_id, test_date AS case_date, game_version, NULL AS bug_status FROM test_case")
                     if 'bug_case' in selected_tables:
-                        if bug_status == 3:
-                            queries.append(f"SELECT bug_case_id AS case_id, bug_date AS case_date, game_version, bug_status FROM bug_case WHERE bug_status = {bug_status}")
-                        else:
+                        if bug_status == '3':
                             queries.append(f"SELECT bug_case_id AS case_id, bug_date AS case_date, game_version, bug_status FROM bug_case")
+                        else:
+                            queries.append(f"SELECT bug_case_id AS case_id, bug_date AS case_date, game_version, bug_status FROM bug_case WHERE bug_status = {bug_status}")
                 else:
                     if 'test_case' in selected_tables:
                         queries.append(f"SELECT test_case_id AS case_id, test_date AS case_date, game_version, NULL AS bug_status FROM test_case WHERE (game_version = '{game_version}')")
                     if 'bug_case' in selected_tables:
-                        if bug_status == 3:
-                            queries.append(f"SELECT bug_case_id AS case_id, bug_date AS case_date, game_version, bug_status FROM bug_case WHERE (game_version = '{game_version}') AND bug_status = {bug_status}")
-                        else:
+                        if bug_status == '3':
                             queries.append(f"SELECT bug_case_id AS case_id, bug_date AS case_date, game_version, bug_status FROM bug_case WHERE (game_version = '{game_version}')")
+                        else:
+                            queries.append(f"SELECT bug_case_id AS case_id, bug_date AS case_date, game_version, bug_status FROM bug_case WHERE (game_version = '{game_version}') AND bug_status = {bug_status}")
+
                 
              
             # if game_version is None:
@@ -249,6 +257,7 @@ def search():
             
             print(queries)
             final_query = ' UNION '.join(queries)
+            final_query += " ORDER BY case_date DESC"
             cursor.execute(final_query)
             results = cursor.fetchall()
             cursor.close()
@@ -352,6 +361,8 @@ def get_search_detail():
                 
             cur.execute("SELECT TEST_CASE_ID, TEST_DATE, GAME_VERSION FROM TEST_CASE WHERE TEST_CASE_ID = (SELECT TEST_CASE_ID FROM BUG_CASE WHERE BUG_CASE_ID = %s)", [case_id])
             test_case = cur.fetchone()
+            cur.execute("SELECT BUG_CASE_ID, BUG_DATE, GAME_VERSION, BUG_STATUS FROM BUG_CASE WHERE GAME_VERSION like (SELECT GAME_VERSION FROM BUG_CASE WHERE BUG_CASE_ID = %s) AND BUG_CASE_ID <> %s limit 10", [case_id, case_id])
+            recommend_cases = cur.fetchall()
             print(screenshot_full_path)
             
         except AttributeError as e:
@@ -361,7 +372,7 @@ def get_search_detail():
         finally:
             cur.close()
             
-        return render_template('main.html', template_name='search/SearchDetail.html', search_detail_content='search/BugDetail.html', bug_case=bug_case, case_id=case_id, screenshot_info=screenshot_info, screenshot_full_path=screenshot_full_path, test_case=test_case)
+        return render_template('main.html', template_name='search/SearchDetail.html', search_detail_content='search/BugDetail.html', bug_case=bug_case, case_id=case_id, screenshot_info=screenshot_info, screenshot_full_path=screenshot_full_path, test_case=test_case, recommend_cases=recommend_cases)
     
     else:
         flash('case_code가 올바르지 않습니다.')
@@ -538,5 +549,5 @@ def download(filename):
     return send_file(filename, as_attachment=True)
 
 if __name__ == "__main__":
-    # app.run(debug=True)
-    serve(app, host='0.0.0.0', port=5000)
+    app.run(debug=True)
+    # serve(app, host='0.0.0.0', port=5000)

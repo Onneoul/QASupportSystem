@@ -5,6 +5,7 @@
     overflow-y: auto; /* 내부에만 스크롤이 생기게 */
 }
 
+/* Test Detail 섹션 */
 
 #testDetailArea {
     display: grid;
@@ -12,6 +13,7 @@
     grid-template-rows: repeat(8, 1fr); /* 8개의 행, 각각 1 비율로 */
     gap: 3px 3px; /* 행과 열 사이의 간격 */
 }
+
 #testDetailArea {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -20,7 +22,7 @@
     align-items: start;
 }
 
-#logArea {
+#testLogArea {
     grid-row: 3 / 7;
     grid-column: 1 / 5;
     border: 1px dashed red;
@@ -28,14 +30,14 @@
     overflow-y: auto; /* 내용이 넘치면 스크롤바 생성 */
 }
 
-#performanceArea {
+#testPerformanceArea {
     grid-row: 1 / 3;
     grid-column: 1 / 5;
     border: 1px dashed red;
     margin: 3px;
 }
 
-#bugCasesArea {
+#testBugCasesArea {
     grid-row: 1 / 7;
     grid-column: 5 / 6;
     border: 1px dashed red;
@@ -44,7 +46,7 @@
     overflow-y: auto; /* 내용이 넘치면 스크롤바가 생깁니다 */
 }
 
-#caseRecommendArea {
+#testCaseRecommendArea {
     grid-row: 7 / 9;
     grid-column: 1 / 6;
     border: 1px dashed red;
@@ -56,14 +58,82 @@
     width: 100%;
 }
 
-.areaTitle {
+.testAreaTitle {
     font-weight: 700;
     border-bottom: 2px solid black;
     margin-bottom: 5px;
     padding: 5px;
+    display: flex;
+    justify-content: space-between; 
+}
+
+
+
+/* 버그 디테일 섹션 */
+
+#bugDetailArea {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 5개의 열, 각각 1 비율로 */
+    grid-template-rows: repeat(7, auto); /* 8개의 행, 각각 1 비율로 */
+    gap: 5px; /* 행과 열 사이의 간격 */
 }
 
 .bugImage {
-  max-width: 800px;
-  max-height: 450px;
+    max-width: 800px;
+    max-height: 450px;
+}
+
+.bugTitle{
+    grid-column: 1 / 5;
+    grid-row: span 1;
+}
+
+
+#statusArea{
+    grid-column: 1 / 5;
+    /* grid-row: 2 / 2; */
+}
+
+#bugScreenshotArea{
+    grid-column: 1 / 4;
+    grid-row: 3 / 5;
+}
+
+.bugAreaTitle{
+    font-weight: 700;
+    border-bottom: 2px solid black;
+    margin-bottom: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between; 
+}
+
+
+.bugDownloadButtonArea{
+
+}
+
+#bugTestCaseArea{
+    grid-column: 4 / 5;
+    grid-row: 3 / 5;
+}
+
+.bugRecommendTestCase{
+
+}
+
+#bugDetailTestCaseTable{
+
+}
+
+
+#bugDescriptionArea{
+    grid-column: 1 / 5;
+    grid-row: 5 / 6;
+}
+
+#bugCaseRecommendArea{
+    grid-column: 1 / 5;
+    grid-row: 6 / 7;
+    width: 100%;
 }

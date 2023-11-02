@@ -23,3 +23,9 @@
   #searchResultTable tr:last-child td {
     border-bottom: none;
   }
+  #searchResult{
+    padding: 10px;
+    height: calc(100vh - 210px);
+    overflow: visible;
+    overflow-y: auto;
+  }

@@ -31,7 +31,7 @@ class game_Info_Manage:
         
 
         self.create_ui()
-        
+    
 
     # UI 생성
     def create_ui(self):
@@ -50,9 +50,10 @@ class game_Info_Manage:
                 version = game_version_entry.get()
                 try:
                     cursor.execute("INSERT INTO GAME_INFORMATION (GAME_TITLE, GAME_VERSION, GAME_EXECUTION_PATH) VALUES (%s, %s, %s)", (title, version, exe_path))
-                    cursor.connect.commit()
+                    cursor.execute('COMMIT')
                     add_game_window.destroy()
                     print("Game information added successfully!")
+                    load_game_info()  # 게임 정보를 추가한 후 Combobox 새로고침
                 except Exception as e:
                     print("Error occurred while adding game information:", str(e))
 

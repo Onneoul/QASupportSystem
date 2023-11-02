@@ -72,7 +72,7 @@
             <label>Bug Status</label>
             <select name="bug_status">
                 <option value="3" {% if bug_status == '3' %}selected{% endif %}>모두</option>
-                <option value="0" {% if bug_status == '0' %}selected{% endif %}>검토 안함</option>
+                <option value="0" {% if bug_status == '0' %}selected{% endif %}>검토 전</option>
                 <option value="1" {% if bug_status == '1' %}selected{% endif %}>검토 중</option>
                 <option value="2" {% if bug_status == '2' %}selected{% endif %}>검토 완료</option>
             </select><br>
