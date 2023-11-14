@@ -1,0 +1,2 @@
+[Error] IOException: Failed to read game settings from file at ConfigLoader.Load(). Ensure that the configuration file is present in the specified directory.
+[Warning] Material missing for object: Tree_3. A default material has been applied. Please check your asset import settings.

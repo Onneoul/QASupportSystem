@@ -1,3 +1,0 @@
-DB 수정 사항
-
-User를 제외한 ID 파트들을 Trigger를 사용한 VARCHAR 타입으로 변경.
