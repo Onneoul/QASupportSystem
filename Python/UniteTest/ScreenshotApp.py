@@ -32,7 +32,7 @@ class ScreenshotApp:
         self.current_screenshot_idx = 0
         self.popup = None
         print("screenshotApp Type = %s", type(self.root))
-        keyboard.on_press_key("F2", self.capture_screenshot) # Screenshot 촬영 키 지정
+        keyboard.on_press_key("F1", self.capture_screenshot) # Screenshot 촬영 키 지정
 
         if create_ui:
             self.create_ui()

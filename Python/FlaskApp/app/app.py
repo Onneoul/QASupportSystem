@@ -15,12 +15,8 @@ LOG_FOLDER = 'static/Resource/Log'
 PERFORMANCE_FOLDER = 'static/Resource/Performance'
 MACRO_FOLDER = 'static/Resource/Macro'
 
-app.config['SECRET_KEY'] = '#aB354354'
+app.config['SECRET_KEY'] = '@$aBN3451'
 
-# app.config['MYSQL_HOST'] = 'localhost'
-# app.config['MYSQL_USER'] = 'kimminse'
-# app.config['MYSQL_PASSWORD'] = '#aB354354'
-# app.config['MYSQL_DB'] = 'autoqa'
 
 app.config['MYSQL_HOST'] = '180.83.154.240'
 app.config['MYSQL_USER'] = 'normal_user_test'
