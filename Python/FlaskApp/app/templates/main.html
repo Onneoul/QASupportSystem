@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/search.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/searchDetail.css') }}">
+    </head>
+    <body>
+        <section>
+            <div class="MenuBar">
+                <div class="menuItem">
+                    <a href="dashboard">Home</a>
+                </div>
+                <div class="menuItem">
+                    <a href="search">Search</a>
+                </div>
+                <div class="menuItem">
+                    <a href="logout">LogOut</a>
+                </div>
+            </div>
+            <div class="Container">
+                {% include template_name %}
+            </div>
+        </section>
+    </body>
+</html>

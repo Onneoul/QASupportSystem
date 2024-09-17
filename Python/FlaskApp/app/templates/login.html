@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    </head>
+    <body>
+        <div id="LoginArea">
+            <form  name="Login" method="POST">
+                <table class="login">
+                    <tr>
+                        ID:<br>
+                        <input class="input" type="text" name="ID"/>
+                        <br>
+                    </tr>
+                    <tr>
+                        PASSWORD:<br>
+                        <input class="input" type="PASSWORD" name="PASSWORD"/>
+                        <br>
+                    </tr>
+                    <tr>
+                        <input type="submit" value="Login"/>
+                    <tr>
+                </table>
+            </form>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+        </div>
+
+    </body>
+    {% if error %}
+        <script>
+            alert("{{ error }}");
+        </script>
+    {% endif %}
+</html>

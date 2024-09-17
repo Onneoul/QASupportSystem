@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BugDetail</title>
+</head>
+
+<body>
+    <div id="bugDetailArea">
+
+        <div class="bugTitle">
+            <div class="bugAreaTitle">
+                Screenshot
+                {% if screenshot_full_path %}
+                <div class="bugDownloadButtonArea">
+                    <a href="{{ url_for('download', filename=screenshot_full_path) }}" download class="downloadButton">Download</a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div id="statusArea">
+            {% if bug_case[4] == 0 %}
+                검토 전
+            {% elif bug_case[4] == 1 %}
+                검토 중
+            {% elif bug_case[4] == 2 %}
+                검토 완료
+            {% else %}
+                오류
+            {% endif %}
+        </div>
+
+        <div id="bugScreenshotArea">
+            <img src="{{ screenshot_full_path }}" alt="Screenshot" class="bugImage">
+        </div>
+
+        <div id="bugTestCaseArea">
+            <div class="bugAreaTitle">Test Case</div>
+                <table id="bugDetailTestCaseTable">
+                    <td><a href="searchDetail?case_id={{ test_case[0] }}">{{ test_case[0] }}</a></td>
+                    <td>{{ test_case[1] }}</td>
+                    <td>{{ test_case[2] }}</td>
+                </table>
+        </div>
+        
+        <div id="bugDescriptionArea">
+            <div class="bugAreaTitle">Screenshot Description</div>
+            {% if screenshot_info %}
+                <div id="bugDescription">
+                    {{ screenshot_info[3] }}
+                </div>
+            {% endif %}
+        </div>
+        
+        <div id="bugCaseRecommendArea">
+            <div class="bugAreaTitle">Case recommend</div>
+            {% for recommend_case in recommend_cases %}
+                <div>
+                    <table class="bugRecommendTestCase">
+                        <td><a href="searchDetail?case_id={{recommend_case[0]}}">{{recommend_case[0]}}</a></td>
+                        <td>{{ recommend_case[1] }}</td>
+                        <td>{{ recommend_case[2] }}</td>
+                        <td>
+                            {% if recommend_case[3] == 0 %}
+                            검토 전
+                            {% elif recommend_case[3] == 1 %}
+                                검토 중
+                            {% elif recommend_case[3] == 2 %}
+                                검토 완료
+                            {% else %}
+                                오류
+                            {% endif %}
+                        <td>
+                    </table>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

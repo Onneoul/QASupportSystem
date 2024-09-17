@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestDetail</title>
+</head>
+<body>
+    <div id="testDetailArea">
+
+        <div id="testPerformanceArea">
+        <div class="testAreaTitle">Performance Data
+        {% if performance_contents %}
+            <div class="downloadButtonArea">
+                <a href="{{ url_for('download', filename=performance_contents[0].performance_path) }}" download class="downloadButton">Download</a>
+            </div>
+        {% endif %}
+        </div>
+        {% for performance in performance_contents %}
+                <div>
+                    {{ performance.content|safe }}
+                </div>
+        {% endfor %}
+            <!-- <div class="TestValue">
+                FPS: 59<br>
+                CPU Usage: 23%<br>
+                GPU Usage: 45%<br>
+                Memory Usage: 1200 MB<br>
+                Loading Time: 3.2 seconds<br>
+                Ping: 22 ms<br>
+                Draw Calls: 323<br>
+                Triangles: 2M<br>
+                Vertices: 1M<br>
+                Audio Channels: 12<br>
+            </div> -->
+        </div>
+
+        <div id="testLogArea">
+            <div class="testAreaTitle">Log
+            {% if log_contents %}
+            <div class="downloadButtonArea">
+                <a href="{{ url_for('download', filename=log_contents[0].log_path) }}" download class="downloadButton">Download</a>
+            </div>
+            {% endif %}
+        </div>
+        {% for log in log_contents %}
+            <div>
+                {{ log.content|safe }}
+            </div>
+        {% endfor %}
+            <!-- <div class="TestValue">
+                [Error] NullReferenceException: Object reference not set to an instance of an object at PlayerController.Update()<br>
+                [Warning] The referenced script on this Behaviour is missing!<br>
+                [Error] Failed to load scene: Scene2 does not exist<br>
+                [Info] Game started<br>
+                [Error] IndexOutOfRangeException: Index was outside the bounds of the array at EnemyAI.Move()<br>
+                [Warning] Obsolete API used in ThirdPartyPlugin.someMethod()<br>
+                [Info] Player connected: Player_1<br>
+                [Error] UnassignedReferenceException: The variable playerHealth of PlayerController has not been assigned.<br>
+                [Info] Asset Loaded: CharacterModel<br>
+                [Error] MissingComponentException: There is no 'Rigidbody' attached to the 'Enemy' game object
+            </div> -->
+        </div>
+
+        <div id="testBugCasesArea">
+        <div class="testAreaTitle">Bug Case</div>
+        {% for bug_case in bug_cases %}
+        <div>
+            <table class="testDetailBugCase">
+                <td><a href="searchDetail?case_id={{bug_case[0]}}">{{bug_case[0]}}</a></td>
+                <td>{{ bug_case[1] }}</td>
+                <tr></tr>
+                <td>{{ bug_case[2] }}</td>
+                <td>
+                    {% if bug_case[3] == 0 %}
+                        검토 전
+                    {% elif bug_case[3] == 1 %}
+                        검토 중
+                    {% elif bug_case[3] == 2 %}
+                        검토 완료
+                    {% else %}
+                        
+                    {% endif %}
+                </td>
+            </table>
+        </div>
+        {% endfor %}
+        </div>
+
+        <div id="testCaseRecommendArea">
+        <div class="testAreaTitle">Case recommend</div>
+        {% for recommend_case in recommend_cases %}
+            <div>
+                <table class="recommendTestCase">
+                    <td><a href="searchDetail?case_id={{recommend_case[0]}}">{{recommend_case[0]}}</a></td>
+                    <td>{{ recommend_case[1] }}</td>
+                    <td>{{ recommend_case[2] }}</td>
+                </table>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+
+</body>
+</html>

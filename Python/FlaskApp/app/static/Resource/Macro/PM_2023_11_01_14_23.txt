@@ -1,0 +1,11 @@
+[Error] NullReferenceException: Object reference not set to an instance of an object at PlayerController.Update()
+[Warning] The referenced script on this Behaviour is missing!
+[Error] Failed to load scene: Scene2 does not exist
+[Info] Game started
+[Error] IndexOutOfRangeException: Index was outside the bounds of the array at EnemyAI.Move()
+[Warning] Obsolete API used in ThirdPartyPlugin.someMethod()
+[Info] Player connected: Player_1
+[Error] UnassignedReferenceException: The variable playerHealth of PlayerController has not been assigned.
+[Info] Asset Loaded: CharacterModel
+[Error] MissingComponentException: There is no 'Rigidbody' attached to the 'Enemy' game object
+Test 값 1

@@ -1,0 +1,2 @@
+Texture Memory: 400 MB. High texture memory usage may lead to performance issues on lower-end devices.
+Active GameObjects: 1750. Large number of active GameObjects may cause performance degradation.

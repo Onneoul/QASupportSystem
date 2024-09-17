@@ -1,0 +1,5 @@
+SCREENSHOT_ID,SCREENSHOT_NAME,SCREENSHOT_PATH,SCREENSHOT_Description,SCREENSHOT_DATE
+1,TestScreenshot1.png,static/Resource/Screenshot/,"테스트용 Description입니다.","2023-10-24 15:25:00"
+2,TestScreenshot2.png,static/Resource/Screenshot/,"테스트용 Description입니다.22","2023-10-25 16:26:00"
+3,screenshot_20231031_185632.png,static/Resource/Screenshot/,"무한 로딩.","2023-10-31 18:56:32"
+4,screenshot_20231031_185632.png,static/Resource/Screenshot/,"무한 로딩.","2023-10-31 18:56:32"

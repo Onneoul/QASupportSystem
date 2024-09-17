@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Page</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // 로컬 스토리지에서 값 로드
+            if(localStorage.getItem("game_version")) {
+                document.getElementsByName('game_version')[0].value = localStorage.getItem("game_version");
+            }
+            if(localStorage.getItem("test_case_checked") === 'true') {
+                document.getElementsByName('tables')[0].checked = true;
+            }
+            if(localStorage.getItem("bug_case_checked") === 'true') {
+                document.getElementsByName('tables')[1].checked = true;
+            }
+            if(localStorage.getItem("bug_status")) {
+                document.getElementsByName('bug_status')[0].value = localStorage.getItem("bug_status");
+            }
+
+            // 현재 시각 설정
+            var today = new Date();
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0');
+            var yyyy = today.getFullYear();
+            var hours = String(today.getHours()).padStart(2, '0');
+            var minutes = String(today.getMinutes()).padStart(2, '0');
+        
+            var currentDatetime = `${yyyy}-${mm}-${dd}T${hours}:${minutes}`;
+            document.getElementsByName('end_date')[0].value = currentDatetime;
+
+            // 폼 제출시 로컬 스토리지에 값 저장
+            document.forms[0].addEventListener('submit', function() {
+                localStorage.setItem("game_version", document.getElementsByName('game_version')[0].value);
+                localStorage.setItem("test_case_checked", document.getElementsByName('tables')[0].checked);
+                localStorage.setItem("bug_case_checked", document.getElementsByName('tables')[1].checked);
+                localStorage.setItem("bug_status", document.getElementsByName('bug_status')[0].value);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="title">
+        <h1>Search</h1>
+        <div class="title-underline"></div>
+    </div>
+    
+    <div id="searchBar">
+        <form action="search" method="post">
+            <!-- 1. Case Select -->
+            <label>Case 선택: </label>
+            <input type="checkbox" name="tables" value="test_case" {% if 'test_case' in tables %}checked{% endif %}> Test Case
+            <input type="checkbox" name="tables" value="bug_case" {% if 'bug_case' in tables %}checked{% endif %}> Bug Case<br>
+          
+            <!-- 2. Date Range -->
+            From: <input type="datetime-local" name="start_date" value="{{ start_date }}">
+            To: <input type="datetime-local" name="end_date" value="{{ end_date }}"><br>
+          
+            <!-- 3. Game Version -->
+            <label>Game Version: </label>
+            <select name="game_version">
+                <option value="None" {% if game_version == 'None' %}selected{% endif %}>모두</option>
+                {% for version in game_versions %}
+                    <option value="{{ version }}" {% if game_version == version %}selected{% endif %}>{{ version }}</option>
+                {% endfor %}
+            </select><br>
+            
+          
+            <!-- 4. Bug Status -->
+            <label>Bug Status</label>
+            <select name="bug_status">
+                <option value="3" {% if bug_status == '3' %}selected{% endif %}>모두</option>
+                <option value="0" {% if bug_status == '0' %}selected{% endif %}>검토 전</option>
+                <option value="1" {% if bug_status == '1' %}selected{% endif %}>검토 중</option>
+                <option value="2" {% if bug_status == '2' %}selected{% endif %}>검토 완료</option>
+            </select><br>
+
+            <!-- Search Button -->
+            <input type="submit" value="Search">
+          </form>
+    </div>
+    <div class="underLine"></div>
+    <div id="searchResult">
+        {% if results %}
+        <table id="searchResultTable">
+            <tr>
+                <th class="searchResultTableCol">Case ID</th>
+                <th class="searchResultTableCol">Case Date</th>
+                <th class="searchResultTableCol">Game Version</th>
+                <th class="searchResultTableCol">Status</th>
+            </tr>
+            {% for result in results %}
+                <tr>
+                    <td><a href="searchDetail?case_id={{result[0]}}">{{ result[0] }}</a></td>
+                    <td>{{ result[1] }}</td>
+                    <td>{{ result[2] }}</td>
+                    <td>
+                        {% if result[3] == 0 %}
+                            검토 전
+                        {% elif result[3] == 1 %}
+                            검토 중
+                        {% elif result[3] == 2 %}
+                            검토 완료
+                        {% else %}
+                            
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+    </div>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <script>
+                {% for message in messages %}
+                    alert("{{ message }}");
+                {% endfor %}
+            </script>
+        {% endif %}
+    {% endwith %}
+</body>
+</html>
